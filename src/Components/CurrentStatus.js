@@ -36,8 +36,6 @@ const CurrentStatus = () => {
         return "text-red-500";
       case "DELIVERY_FAILED":
         return "text-red-500";
-      case "DELIVERED_TO_SENDER":
-        return "text-red-500";
       default:
         return "text-yellow-500";
     }

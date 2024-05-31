@@ -6,7 +6,6 @@ import i18n from "../i18n";
 const ProgressBar = () => {
   const { t } = useTranslation();
   const currentLanguage = i18n.language;
-  console.log(currentLanguage);
   const currentStatus = useSelector(
     (state) => state.shipment.shipmentInfo.currentStatus
   );
@@ -15,7 +14,7 @@ const ProgressBar = () => {
       case "DELIVERED":
         return "bg-green-500";
       case "CANCELLED":
-        return "bg-redd-500";
+        return "bg-red-500";
       default:
         return "bg-yellow-500";
     }
@@ -25,7 +24,7 @@ const ProgressBar = () => {
       case "DELIVERED":
         return [true, true, true, true];
       case "CANCELLED":
-        return [true, true, false, false];
+        return [true, true, true, false];
       case "PACKAGE_RECEIVED":
         return [true, true, false, false];
       case "TICKET_CREATED":
